@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  apache:
+    image: php:apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./website:/var/www/html
+      - ./scripts:/var/www/html/scripts
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password  
+      MYSQL_DATABASE: counter_db
+      MYSQL_USER: counter
+      MYSQL_PASSWORD: cntrpassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    
+
+volumes:
+  mysql_data:
