@@ -1,6 +1,6 @@
 <?php
 // Подключение к базе данных
-$servername = "mysql"; // Имя хоста MySQL из docker-compose
+$servername = "mysql";
 $username = "counter";
 $password = "cntrpassword";
 $dbname = "counter_db";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 
 
 // Запрос для получения последнего номера талона
-$sql = "SELECT MAX(ticket) as last_ticket FROM tickets";  // Замените 'tickets' на имя вашей таблицы
+$sql = "SELECT MAX(ticket) as last_ticket FROM tickets";
 $result = $conn->query($sql);
 
 if ($result) {

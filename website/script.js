@@ -1,8 +1,8 @@
-// JavaScript для получения нового номера талона
+// Получение нового номера талона
 
 function get_new_ticket_number() {
     // URL для обращения к PHP скрипту, который взаимодействует с базой данных
-    const url = './scripts/ticket.php'; //  Убедитесь, что путь корректный
+    const url = './scripts/ticket.php';
   
     return fetch(url, {
       method: 'GET', 
@@ -23,7 +23,7 @@ function get_new_ticket_number() {
     .catch(error => {
       console.error('Ошибка при получении номера талона:', error);
       // Обработка ошибки, например, отображение сообщения пользователю
-      return null; // Или другое значение по умолчанию
+      return null;
     });
   }
   
@@ -35,8 +35,5 @@ function get_new_ticket_number() {
     if (newTicket !== null) {
        //  Отображаем номер талона пользователю
       alert(`Ваш номер талона: ${newTicket}`); 
-  
-      //  ... и любые другие действия, например, отправка номера на сервер для хранения,
-      //  обновление интерфейса и т.д.
     }
   });
