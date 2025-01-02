@@ -3,6 +3,9 @@ version: '3.9'
 services:
   apache:
     image: php:apache
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:80"
     volumes:
@@ -20,7 +23,6 @@ services:
       MYSQL_PASSWORD: cntrpassword
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
   
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
