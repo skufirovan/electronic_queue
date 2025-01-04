@@ -10,7 +10,7 @@ services:
       - "8080:80"
     volumes:
       - ./website:/var/www/html
-      - ./scripts:/var/www/html/scripts
+      - ./scripts/get_ticket.php:/var/www/html/scripts
     depends_on:
       - mysql
 

@@ -9,9 +9,20 @@
 </head>
 <body class="root">
     <main class="main">
-        <h1 class="title">Электронная очередь</h1>
-        <button class="button" id="button">Получить талон</button> 
+        <h1 class="title">ДОБРО ПОЖАЛОВАТЬ!</h1>
+        <p class="subtitle">Пожалуйста, выберите услугу</p>
+        <button class="button" id="acceptance-of-documents">Прием документов</button>
+        <button class="button" id="result">Выдача результата услуги</button> 
+        <button class="button" id="pre-registration">Предварительная запись</button> 
     </main>
+
+    <div class="popup popup_is-animated">
+      <div class="popup__container">
+        <button type="button" class="popup__close"></button>
+        <h3 class="title">ВАШ ТАЛОН</h3>
+        <p class="subtitle ticket"></p>
+      </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
