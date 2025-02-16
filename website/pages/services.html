@@ -9,11 +9,11 @@
 </head>
 <body class="root">
     <main class="main">
-        <h1 class="title">ДОБРО ПОЖАЛОВАТЬ!</h1>
-        <p class="subtitle">Пожалуйста, выберите услугу</p>
+        <h1 class="title">Пожалуйста, выберите услугу</h1>
         <button class="button" id="acceptance-of-documents">Прием документов</button>
         <button class="button" id="result">Выдача результата услуги</button> 
-        <button class="button" id="pre-registration">Предварительная запись</button> 
+        <button class="button" id="pre-registration">Предварительная запись</button>
+        <button class="button" id="back">Вернуться назад</button>
     </main>
 
     <div class="popup popup_is-animated">
@@ -24,5 +24,10 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        document.querySelector('#back').addEventListener('click', function() {
+          window.location.href = 'index.html';
+        });
+    </script>
 </body>
 </html>
