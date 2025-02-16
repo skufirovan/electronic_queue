@@ -6,9 +6,9 @@ const closeButton = document.querySelector('.popup__close');
 
 function getNewTicket(serviceCode) {
   // URL для обращения к PHP скрипту, который взаимодействует с базой данных
-  const url = './scripts/get_ticket.php';
+  const URL = '../scripts/get_ticket.php';
 
-  return fetch(url, {
+  return fetch(URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json' // Ожидаем JSON ответ от сервера

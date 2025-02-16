@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>Электронная очередь</title>
+</head>
+<body class="root">
+    <main class="main">
+        <h1 class="title">Очередь</h1>
+        <ul class="queue">
+        </ul>
+        <button class="button" id="back">Вернуться назад</button>
+    </main>
+    <script src="../queue.js"></script>
+    <script>
+        document.querySelector('#back').addEventListener('click', function() {
+          window.location.href = '../index.html';
+        });
+    </script>
+</body>
+</html>

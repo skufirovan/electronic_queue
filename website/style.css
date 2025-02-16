@@ -30,13 +30,18 @@
 .button {
     margin: 0 0 12px;
     padding: 12px 12px;
+    min-width: min-content;
     width: 35%;
-    height: minmax(min-content, max-content);
+    height: max-content;
     background-color: #b0a4b0;
     border: 2px solid #948389;
     border-radius: 3px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
+}
+
+.button:last-of-type {
+    margin-bottom: 0;
 }
 
 .popup {
@@ -111,4 +116,21 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 48px;
     font-weight: bold;
+}
+
+
+/* queue.html */
+
+.queue {
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.queue__element {
+    margin: 0;
+    padding-bottom: 5px;
 }
