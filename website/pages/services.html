@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../vendor/normalize.css">
+  <link rel="stylesheet" href="../vendor/fonts.css">
   <link rel="stylesheet" href="../style.css">
   <title>Электронная очередь</title>
 </head>
@@ -13,14 +14,16 @@
         <button class="button" id="acceptance-of-documents">Прием документов</button>
         <button class="button" id="result">Выдача результата услуги</button> 
         <button class="button" id="pre-registration">Предварительная запись</button>
-        <button class="button" id="back">Вернуться назад</button>
+        <button class="button" id="back" style="color: #ee2f53;">Вернуться назад</button>
+        <img src="../img/Flag.png" class="image_flag">
+        <img src="../img/PutinVV.png" class="image_putin">
     </main>
 
     <div class="popup popup_is-animated">
       <div class="popup__container">
         <button type="button" class="popup__close"></button>
         <h3 class="title">ВАШ ТАЛОН</h3>
-        <p class="subtitle ticket"></p>
+        <p class="subtitle ticket" style="color: #ee2f53;"></p>
       </div>
     </div>
     <script src="../services.js"></script>
