@@ -39,6 +39,12 @@ if ($result) {
 
     // Возврат нового номера
     if ($insertResult) {
+        // Сброс кеша после успешной записи
+        $memcached = new Memcached();
+        $memcached->addServer('memcached', 11211);
+        $cacheKey = 'queue';
+        $memcached->delete($cacheKey);
+
         header('Content-Type: application/json');
         echo json_encode(['ticket' => $serviceCode . $newNumber]);
     } else {

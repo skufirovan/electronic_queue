@@ -32,5 +32,10 @@ services:
       PMA_HOST: mysql
       MYSQL_ROOT_PASSWORD: rootpassword
 
+  memcached:
+    image: memcached:latest
+    ports:
+      - "11211:11211"
+
 volumes:
   mysql_data:
