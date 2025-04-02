@@ -1,7 +1,7 @@
 const queueList = document.querySelector('.queue');
 
 async function getQueue() {
-    const URL = '../scripts/get_queue.php';
+    const URL = '/scripts/get_queue.php';
 
     return fetch(URL, {
         method: 'GET',
